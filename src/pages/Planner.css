@@ -1,0 +1,343 @@
+.planner-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-primary);
+}
+
+.step-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.input-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+.input-table td {
+    padding: 20px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.input-table tr:last-child td {
+    border-bottom: none;
+}
+
+.input-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    width: 200px;
+}
+
+.planner-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.planner-input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.interest-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interest-chip {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.interest-chip.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.itinerary-timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent), transparent);
+    opacity: 0.2;
+}
+
+.day-section {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.day-badge {
+    position: absolute;
+    left: -42px;
+    top: -5px;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.activities-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.timeline-activity {
+    position: relative;
+    padding-left: 10px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 2px solid #000;
+    z-index: 2;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activity-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.activity-media {
+    width: 240px;
+    position: relative;
+}
+
+.activity-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-time-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.activity-info {
+    flex: 1;
+    padding: 24px;
+}
+
+.activity-type-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.activity-category {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+}
+
+.dot-divider {
+    width: 4px;
+    height: 4px;
+    background: var(--glass-border);
+    border-radius: 50%;
+}
+
+.activity-cost-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+.activity-info h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.activity-meta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+}
+
+.activity-actions {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--glass-border);
+}
+
+.spot-btn {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.spot-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.packing-assistant-panel {
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.packing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.packing-category {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.packing-category h5 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.packing-list {
+    list-style: none;
+}
+
+.packing-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.packing-item:last-child {
+    border-bottom: none;
+}
+
+.packing-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+}
+
+.weight-indicator {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-left: auto;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-secondary {
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid var(--glass-border);
+    font-weight: 600;
+}
+
+.pre-planned-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.place-input-row {
+    display: flex;
+    gap: 10px;
+}
