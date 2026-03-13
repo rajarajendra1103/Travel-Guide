@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# 🌍 Travel Guide - Your Ultimate Trip Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Travel Guide is a modern, AI-powered web application designed to help travelers plan, discover, and organize their journeys with ease. Built with React, TypeScript, and Vite, it offers a seamless and responsive experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🔍 Smart Search**: Intelligent search functionality to find your next destination.
+- **🤖 AI Planner**: Leverage advanced AI to generate personalized itineraries and travel plans.
+- **🎒 Packing Assistant**: A smart checklist to ensure you never leave home without the essentials.
+- **🚗 Transport Guide**: Detailed information and management of travel logistics and transportation.
+- **🗺️ Discovery**: Explore and discover new places with rich visual content.
+- **🎨 Premium UI/UX**: Stunning design with smooth animations using Framer Motion and a glassmorphism aesthetic.
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (Latest LTS recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rajarajendra1103/Travel-Guide.git
+   cd Travel-Guide
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Set up Environment Variables:**
+   Create a `.env` file in the root directory and add your Google AI API key:
+   ```env
+   VITE_GOOGLE_AI_API_KEY=your_api_key_here
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+5. **Open your browser:**
+   Navigate to `http://localhost:5173` to see the application in action.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Built With
+
+- **React 19** - UI Framework
+- **TypeScript** - Type Safety
+- **Vite** - Lightning-fast build tool
+- **Framer Motion** - Production-ready animations
+- **Lucide React** - Beautifully simple icon library
+- **React Router** - Elegant navigation
+- **Google Generative AI** - Cutting-edge AI features
+
+## 📂 Project Structure
+
+- `src/pages`: Main application views (Home, Discovery, Transport, etc.)
+- `src/components`: Reusable UI components.
+- `src/data`: Mock data and static content.
+- `src/hooks`: Custom React hooks for shared logic.
+- `src/utils`: Helper functions and AI service configurations.
+- `src/styles`: Styling and layout components.
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the Travel Guide experience.
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+---
+Created with ❤️ by [rajarajendra1103](https://github.com/rajarajendra1103)
